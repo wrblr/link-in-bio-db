@@ -2,12 +2,87 @@
 <html>
   <head>
     <title>Link-in-bio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+  <style>
+      /* * {
+        border: 1px red dashed;
+      } */
+      html {
+        min-height: 100%;
+      }
+      body {
+        min-height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(135deg, #c9d130, #a9cd24, #83c838, #51c253, #00bb6e, #00b485, #00ab9a, #00a0ad, #0094bc, #0085c8, #0073d1, #045cd6); /* made at https://learnui.design/tools/gradient-generator.html */
+        color: rgba(255, 255, 255, 1.0); /* made at https://rgbacolorpicker.com/ */
+        font-family: "Raleway";
+      }
+      .main-container {
+        max-width: 640px;
+        margin: auto;
+      }
+      .image-row {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .name-row {
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: "Playfair Display";
+        font-size: 24px;
+        font-weight: 900;
+      }
+      .social-icons-row {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .a {
+        color: rgba(255, 255, 255, 1.0);
+        text-decoration: none;
+      }
+      .item {
+        background-color: rgba(0, 180, 255, 0.39);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 1000px;
+        padding: 5px;
+        padding-right: 53px;
+        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5)
+      }
+      .link-text {
+        text-align: center;
+        flex-grow: 1;
+      }
+      .avatar-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+      }
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>

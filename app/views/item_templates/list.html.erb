@@ -1,0 +1,33 @@
+<div class="main-container">
+
+      <div class="image-row">
+        <img class="avatar-image" src="Headshot_UChicago.jpg" alt="Ryan Bell headshot">
+      </div>
+
+      <div class="name-row">
+        Ryan Bell
+      </div>
+
+      <div class="social-icons-row">
+        <a href="https://github.com/wrblr" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <a href="www.linkedin.com/in/walterryanbell" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+
+<div class="links-row">
+    <% @list_of_items.each do |the_item| %>
+      <div class="item">
+        <img src="<%= the_item.thumbnail_url %>" class="thumbnail">
+        <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
+          <%= the_item.link_description %>
+        </a>
+      </div>
+    <% end %>
+  </div>
+  <!-- links-row -->
+</div>
+<!-- main-container -->
